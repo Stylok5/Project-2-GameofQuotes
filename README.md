@@ -18,7 +18,7 @@
 
 Game of Thrones Quotes is a web application that allows users to search for quotes from their favorite characters of the Game of Thrones TV series. It uses the Game of Thrones Quotes API to fetch character information and their quotes. This was a 5-day solo project and my first experience of using a public API and building the front-end in React.
 
-You will find the deployed version here: https://findyourfavoritegotquotes.netlify.app/
+You will find the deployed version here: https://findyourfavoritegotquotes.netlify.app
 
 ![Alt text](https://i.imgur.com/HncxyCE.png "Optional title")
 
