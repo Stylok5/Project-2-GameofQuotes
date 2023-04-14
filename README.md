@@ -46,7 +46,7 @@ On the **QuotePage**, users can view a list of quotes for the selected character
 * React Router Dom
 
 **API Used**:
-* Game Of Thrones Quotes API - https://gameofthronesquotes.xyz/\
+* Game Of Thrones Quotes API - https://gameofthronesquotes.xyz/
 
 **Dev tools**:
 * VS code
