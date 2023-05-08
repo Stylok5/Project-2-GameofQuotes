@@ -23,11 +23,12 @@ You will find the deployed version here: https://findyourfavoritegotquotes.netli
 
 # Installation
 
-To run the application locally, you'll need to have Node.js installed on your machine. You can then follow these steps:
-Clone this repository to your local machine.
-In the root directory of the project, run npm install to install the required dependencies.
-Run npm run dev to start the server.
-Open the url in your browser to view the application.
+To run the application locally, you'll need to have Node.js installed on your machine. To install Node.js visit its website [label](https://nodejs.org/), download the appropriate version of Node.js for your operating system. Run the downloaded installation file and follow the prompts to install Node.js on your computer. In the Visual Studio Code terminal type **node -v** and press Enter to verify that Node.js is installed and to check its version. You can then follow these steps:
+
+1. Clone this repository to your local machine by typing git clone and using the ssh key from github in your terminal.
+2. In the root directory of the project, run npm install to install the required dependencies.
+3. Run npm run dev to start the server.
+4. Open the url in your browser to view the application.
 
 ## Technologies Used
 
@@ -115,7 +116,7 @@ Character's page: ![Alt text](https://i.imgur.com/1mz4Jkb.png "Optional title")
 
 Figuring out how to manipulate the data from the API and getting the search bar to only show the name you typed on the page and filter out the others was propably the most challenging part.
 
-A win was figuring out the logic for the search bar, and the styling which manages to give that cold dark Game Of Thrones feel.
+A win was making it possible to search for a character by pressing enter, if it is the only name filtered in the list, without having to write the whole name and also adding some conditional rendering if the characters had no available information for their houses.
 
 ## Future content and improvements
 
@@ -128,29 +129,3 @@ This project greatly increased my knowledge about consuming and manipulating API
 ## Original Planning Notes
 
 This project was initially going to be a Game Of Thrones quiz. It would provide the user with a total of 10 quotes where he had to select the correct character associated with each quote by picking the correct character image or name, scoring points if he got it right or losing if he was wrong. Due to unforseen time constraints during that project week, I decided I would do something simpler and leave the more complicated functionalities for my next bigger project.
-
-## API Reference
-
-#### Get all items
-
-```http
-  GET /api/items
-```
-
-| Parameter | Type     | Description                |
-| :-------- | :------- | :------------------------- |
-| `api_key` | `string` | **Required**. Your API key |
-
-#### Get item
-
-```http
-  GET /api/items/${id}
-```
-
-| Parameter | Type     | Description                       |
-| :-------- | :------- | :-------------------------------- |
-| `id`      | `string` | **Required**. Id of item to fetch |
-
-#### add(num1, num2)
-
-Takes two numbers and returns the sum.
