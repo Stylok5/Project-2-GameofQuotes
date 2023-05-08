@@ -23,7 +23,7 @@ You will find the deployed version here: https://findyourfavoritegotquotes.netli
 
 # Installation
 
-To run the application locally, you'll need to have Node.js installed on your machine. To install Node.js visit its website [label](https://nodejs.org/), download the appropriate version of Node.js for your operating system. Run the downloaded installation file and follow the prompts to install Node.js on your computer. In the Visual Studio Code terminal type **node -v** and press Enter to verify that Node.js is installed and to check its version. You can then follow these steps:
+To run the application locally, you'll need to have Node.js installed on your machine. To install Node.js visit its website [here](https://nodejs.org/), download the appropriate version of Node.js for your operating system. Run the downloaded installation file and follow the prompts to install Node.js on your computer. In the Visual Studio Code terminal type **node -v** and press Enter to verify that Node.js is installed and to check its version. You can then follow these steps:
 
 1. Clone this repository to your local machine by typing git clone and using the ssh key from github in your terminal.
 2. In the root directory of the project, run npm install to install the required dependencies.
