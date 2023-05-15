@@ -90,7 +90,7 @@ The search function was a bit trickier, as I wanted to filter throught the list 
 
 ![Alt text](https://i.imgur.com/NphD9vM.png "Optional title")
 
-I then updated my return statement so that it would show the filtered data on the page. I then moved on to making the logic for the onclick function, so that when I searched for a name and pressed enter or click the search button or the name, I would then be redirected to that character's page. I also added some logic so that you don't have to write the whole character's name to search for him and used a form for the search bar. By typing some letters and not the whole name,you could still navigate to the character's page if there was only his name left on the filtered list, meaning if the length of the names was 1.
+I then updated my return statement so that it would show the filtered data on the page. I then moved on to making the logic for the onclick function, so that when I searched for a name and pressed enter or click the search button or the name, I would then be redirected to that character's page. I also added some logic so that you don't have to write the whole character's name to search for him and used a form for the search bar. By typing some letters and not the whole name, you could still navigate to the character's page if there was only his name left on the filtered list, meaning if the length of the names was 1.
 
 ![Alt text](https://i.imgur.com/o5nWexn.png "Optional title")
 
@@ -114,9 +114,9 @@ Character's page: ![Alt text](https://i.imgur.com/1mz4Jkb.png "Optional title")
 
 ## Wins and Blockers
 
-Figuring out how to manipulate the data from the API and getting the search bar to only show the name you typed on the page and filter out the others was propably the most challenging part.
-
 A win was making it possible to search for a character by pressing enter, if it is the only name filtered in the list, without having to write the whole name and also adding some conditional rendering if the characters had no available information for their houses.
+
+Figuring out how to manipulate the data from the API and getting the search bar to only show the name you typed on the page and filter out the others was probably the most challenging part.
 
 ## Future content and improvements
 
@@ -128,4 +128,4 @@ This project greatly increased my knowledge about consuming and manipulating API
 
 ## Original Planning Notes
 
-This project was initially going to be a Game Of Thrones quiz. It would provide the user with a total of 10 quotes where he had to select the correct character associated with each quote by picking the correct character image or name, scoring points if he got it right or losing if he was wrong. Due to unforseen time constraints during that project week, I decided I would do something simpler and leave the more complicated functionalities for my next bigger project.
+This project was initially going to be a Game Of Thrones quiz. It would provide the user with a total of 10 quotes where he had to select the correct character associated with each quote by picking the correct character image or name, scoring points if they got it right or losing if they were wrong. Due to unforseen time constraints during that project week, I decided I would do something simpler and leave the more complicated functionalities for my next bigger project.
