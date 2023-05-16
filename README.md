@@ -1,4 +1,4 @@
-# Project_2 Game of Thrones Quotes
+# Project_2 Game of Quotes
 
 `Search for your favorite Game Of Thrones character's quotes with this simple react web page.`
 
