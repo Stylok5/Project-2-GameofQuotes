@@ -32,13 +32,12 @@ To run the application locally, you'll need to have Node.js installed on your ma
 
 ## Technologies Used
 
-**Front-end** :
-
-- React
-- JSX
-- Axios
-- SCSS
-- React Router Dom
+- React: A JavaScript library for building user interfaces
+- React DOM: A package for rendering React components to the DOM (Document Object Model)
+- Axios: A library for making HTTP requests from the browser
+- Sass: A CSS extension language that adds features like variables, nesting, and mixins to make styling easier
+- Yarn: A package manager for managing dependencies in a JavaScript project
+- Vite: A fast development server and build tool for modern web applications
 
 **API Used**:
 
