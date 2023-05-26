@@ -111,7 +111,11 @@ JSX: ![Alt text](https://i.imgur.com/NI98YsV.png "Optional title")
 
 Finishing off I added a navbar with links for the homepage and quotes page and some additional links with their functionalities added in the future. I used SCSS for the styling and finally the app was deployed with Netlify.
 
-Character's page: ![Alt text](https://i.imgur.com/1mz4Jkb.png "Optional title")
+Homepage: ![Alt text](https://i.imgur.com/hfTa3bf.png "Optional title")
+
+Characters page: ![Alt text](https://i.imgur.com/1mz4Jkb.png "Optional title")
+
+Quote page: ![Alt text](https://i.imgur.com/yCfGXwq.jpg "Optional title")
 
 ## Wins and Blockers
 
