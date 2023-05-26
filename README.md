@@ -19,7 +19,7 @@ Game of Quotes is a web application that allows users to search for quotes from 
 
 You will find the deployed version [here](https://game-of-quotes.netlify.app/)
 
-![Alt text](https://i.imgur.com/HncxyCE.png "Optional title")
+![Alt text](https://i.imgur.com/hfTa3bf.png "Optional title")
 
 # Installation
 
@@ -54,7 +54,7 @@ To run the application locally, you'll need to have Node.js installed on your ma
 
 ## How to use
 
-On the **homepage**, users can search for a character by name by typing in the search bar and clicking the "Search" button or pressing the "Enter" key. The page will display a list of characters whose names match the search query. Users can click on a character's name to see a list of their quotes on the QuotePage.
+On the **characters page**, users can search for a character by name by typing in the search bar and clicking the "Search" button or pressing the "Enter" key. The page will display a list of characters whose names match the search query. Users can click on a character's name to see a list of their quotes on the QuotePage.
 
 On the **QuotePage**, users can view a list of quotes for the selected character, along with their name and house. They can click the **Back to homepage** button to return to the homepage.
 
@@ -62,10 +62,12 @@ On the **QuotePage**, users can view a list of quotes for the selected character
 
 The three components of the application:
 
+**Homepage**: the project's initial landing page, designed with both aesthetic appeal and functionality in mind. Its primary purpose is to provide an engaging and visually appealing introduction to the project, enticing users to explore further.
+
 **Header**: displays the navigation menu for the web application at the top of the screen. It consists of a nav element containing an unordered list of navigation links that are generated dynamically using the navigationLinks array.Each link in the navigation menu is represented as a list item (li) and wrapped in a Link component from the react-router-dom library to enable client-side routing.
 The navigationLinks array is an array of objects that define the title of the link and its associated slug.
 
-**Homepage**: a search page that lets users search for characters by name, using filter and find array methods, and see a list of matching results. They can then click on a character's name to see a page with a list of their quotes.
+**Characters**: a search page that lets users search for characters by name, using filter and find array methods, and see a list of matching results. They can then click on a character's name to see a page with a list of their quotes.
 
 **QuotePage**: a detail page that displays information about a selected character, based on their slug which is used as a parameter, including their name, house, and a list of their quotes.
 
@@ -77,7 +79,7 @@ I spent most of my time searching for the appropriate API to use and choosing th
 
 ### Day 2 and 3:
 
-On the second day, I started with the homepage creation. First I used two hook React functions *useState and *useEffect to grab the data from the external API and console log it so that I could better understand how to handle the data.
+On the second day, I started with the characters page creation. First I used two hook React functions *useState and *useEffect to grab the data from the external API and console log it so that I could better understand how to handle the data.
 
 ![Alt text](https://i.imgur.com/gkCG2GX.png "Optional title")
 
@@ -120,6 +122,10 @@ Figuring out how to manipulate the data from the API and getting the search bar 
 ## Future content and improvements
 
 As of now there are three navigation links that are not currently used. These are "Add your own quotes", "Register" and "Login". In the near feature I plan to update this web application so that the user is able to register, login and then add, edit or delete a quote for a character from the show, improve the styling and making it mobile responsive.
+
+### Update
+
+A homepage was implemented to provide an entry point for users. Furthermore, the styling of all pages was enhanced to ensure responsiveness across various devices.
 
 ## Key Learnings
 
