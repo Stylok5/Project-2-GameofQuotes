@@ -1,24 +1,36 @@
 .header {
-  margin-left: -10px;
-  margin-top: -10px;
-  width: 100vw;
-  background-color: rgb(118, 137, 180);
-  padding: 0.1px 10vw;
-  font-size: 20px;
+  width: 100%;
+  background-color: rgb(37, 37, 38);
+  display: flex;
+  align-items: center;
   opacity: 0.95;
 
-  & ul {
-    margin-left: -10vw;
+  ul {
     display: flex;
     list-style: none;
 
-    & a {
+    a {
       text-decoration: none;
     }
   }
 
-  & .headerLink {
+  .headerLink {
     margin-right: 20px;
-    color: black;
+    color: rgb(209, 208, 208);
+    transition: color 0.3s ease;
+  }
+
+  .headerLink:hover {
+    color: rgb(255, 255, 255);
+  }
+
+  .headerLink:active {
+    color: rgb(150, 150, 150);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .header ul li {
+    font-size: 16px;
   }
 }

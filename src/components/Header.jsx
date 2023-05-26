@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 const Header = () => {
   const navigationLinks = [
     { title: "Home", slug: "/" },
+    { title: "Characters", slug: "/characters" },
     { title: "Add your own quotes", slug: "/beers" },
     { title: "Register", slug: "/register" },
     { title: "Login", slug: "/login" },

@@ -24,32 +24,41 @@ const QuotePage = () => {
   }, []);
 
   return (
-    <div>
-      {quote.map((item, ind) => (
-        <ul
-          key={ind}
-          className="listInfo"
-          style={{ padding: item.name === "Tyrion Lannister" ? "200px" : "35" }}
-        >
-          <li className="quoteName">
-            Character's name:<span>{item.name}</span>{" "}
-          </li>
-          <li className="quoteHouse">
-            Character's house:
-            <span>
-              {item.house === null
-                ? "This character does not have a house or his house is unknown"
-                : item.house.name}
-            </span>
-          </li>
-          <li className="quoteQuotes">
-            Character's quotes:<span>{item.quotes}</span>
-          </li>
-        </ul>
-      ))}
-      <Link to="/">
-        <button className="backtoHome">Back to homepage</button>
-      </Link>
+    <div className="quotepage">
+      <div className="details">
+        {quote.map((item, ind) => (
+          <ul
+            key={ind}
+            className="listInfo"
+            style={{
+              padding:
+                item.name === "Tyrion Lannister"
+                  ? "50px 20px 190px 20px"
+                  : "35",
+            }}
+          >
+            <div className="insidecard">
+              <li className="quoteName">
+                <h2> Character's name:</h2> <span>{item.name}</span>
+              </li>
+              <li className="quoteHouse">
+                <h2>Character's house:</h2>{" "}
+                <span>
+                  {item.house === null
+                    ? "This character does not have a house or his house is unknown"
+                    : item.house.name}
+                </span>
+              </li>
+              <li className="quoteQuotes">
+                <h2>Character's quotes:</h2> <span>{item.quotes}</span>
+              </li>
+            </div>
+            {/* <Link to="/">
+              <button className="backtoHome">Back to characters</button>
+            </Link> */}
+          </ul>
+        ))}
+      </div>
     </div>
   );
 };

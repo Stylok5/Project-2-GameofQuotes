@@ -1,59 +1,35 @@
-.quoteName {
-  color: rgb(10, 13, 46);
-}
-
-.pQuote {
-  color: rgb(10, 13, 46);
-}
-
-li {
-  color: rgb(10, 13, 46);
-}
-
 .listInfo {
-  height: 200px;
   display: flex;
-  padding: 35px;
-  margin-top: 80px;
+  height: 7em;
+  padding: 50px 10px 220px 10px;
   flex-direction: column;
-  justify-content: center;
   border: 3px solid rgb(9, 32, 58);
   border-radius: 12px;
-  background-color: rgb(67, 95, 159);
+  background-color: rgba(31, 31, 32, 0.878);
   opacity: 0.95;
+  overflow: auto; /* Add overflow property */
 
-  & li {
-    list-style: none;
-    padding: 5px;
-    font-size: 20px;
+  li {
+    padding: 4px;
   }
 }
 
-.quoteName {
-  color: rgb(198, 220, 237);
-
-  & span {
-    color: rgb(10, 13, 46);
-    margin-left: 7px;
-  }
-}
-.quoteHouse {
-  color: rgb(198, 220, 237);
-  & span {
-    color: rgb(10, 13, 46);
-    margin-left: 7px;
-  }
-}
-.quoteQuotes {
-  color: rgb(198, 220, 237);
-  & span {
-    color: rgb(10, 13, 46);
-    margin-left: 7px;
-  }
+.quotepage {
+  background-image: url("https://images5.alphacoders.com/403/403408.jpg");
+  background-size: cover;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  margin-top: -80px !important;
+  height: 105vh;
+  background-position: center 0%;
+  background-size: 93em;
 }
 
 .backtoHome {
   padding: 10px;
+  margin-left: 45em;
+  margin-bottom: 10px;
   font-size: 17px;
   border: 1px solid rgb(9, 32, 58);
   border-radius: 12px;
@@ -62,5 +38,52 @@ li {
 
   &.backtoHome:hover {
     background-color: rgb(158, 170, 187);
+  }
+}
+
+.details {
+  position: relative;
+  top: 12em;
+  width: 70vw;
+}
+.insidecard {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.quoteName h2,
+.quoteHouse h2,
+.quoteQuotes h2 {
+  font-size: 27px;
+  display: inline;
+  margin-right: 5px;
+  color: rgb(148, 192, 235);
+}
+
+.quoteName span,
+.quoteHouse span,
+.quoteQuotes span {
+  display: inline;
+  color: rgb(198, 220, 237);
+  font-size: 22px;
+}
+
+@media only screen and (min-width: 1800px) {
+  .quotepage {
+    height: 82em;
+    background-size: 160em;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .listInfo {
+    height: 30em;
+  }
+  .details {
+    top: 12em;
+  }
+  .quotepage {
+    height: 85em;
   }
 }
