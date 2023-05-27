@@ -2,3 +2,8 @@
 @import "./quotepage.scss";
 @import "./header.scss";
 @import "./characters.scss";
+
+@font-face {
+  font-family: "Name-Of-Font";
+  src: url("BLKCHCRY.TTF") format("truetype");
+}
