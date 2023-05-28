@@ -22,7 +22,7 @@ label {
 }
 
 .search {
-  border: 1px solid rgb(9, 32, 58);
+  border: 1px solid rgba(67, 95, 159, 0.458);
   font-size: 20px;
   outline: none;
   background-color: rgb(37, 37, 38);
@@ -32,7 +32,7 @@ label {
   color: rgb(169, 197, 227);
 
   &.search::placeholder {
-    font-size: 25px;
+    font-size: 20px;
     text-align: center;
     color: rgb(169, 197, 227);
   }
@@ -46,10 +46,10 @@ label {
 }
 
 .searchBtn {
-  font-size: 25px;
+  font-size: 20px;
   color: rgb(169, 197, 227);
   margin-top: 60px;
-  border: 1px solid rgb(9, 32, 58);
+  border: 1px solid rgba(67, 95, 159, 0.458);
   padding: 11px;
   background-color: rgb(37, 37, 38);
   cursor: pointer;
@@ -92,8 +92,7 @@ ul {
   .name {
     color: rgb(169, 197, 227);
     padding: 15px;
-    border-radius: 50%;
-    border: 1px solid rgb(67, 95, 159);
+    border: 1px solid rgba(67, 95, 159, 0.458);
     background-color: rgb(37, 37, 38);
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
@@ -101,12 +100,15 @@ ul {
     &:hover {
       background-color: rgb(67, 67, 68);
     }
+    &:active {
+      background-color: rgb(90, 90, 93);
+    }
   }
 }
 
 .insidestuff {
   position: relative;
-  top: 2em;
+  top: 3em;
 }
 
 @media only screen and (min-width: 1800px) {

@@ -1,78 +1,113 @@
 .listInfo {
   display: flex;
-  height: 7em;
   padding: 50px 10px 220px 10px;
+  height: 10em;
+  position: relative;
+  bottom: 25px;
   flex-direction: column;
-  border: 3px solid rgb(9, 32, 58);
-  border-radius: 12px;
-  background-color: rgba(31, 31, 32, 0.878);
+  background-color: rgba(60, 59, 58, 0.811);
   opacity: 0.95;
   overflow: auto; /* Add overflow property */
-
   li {
     padding: 4px;
+    position: relative;
+    bottom: 30px;
   }
 }
 
 .quotepage {
-  background-image: url("https://images5.alphacoders.com/403/403408.jpg");
+  background-image: url("https://cdn.wallpapersafari.com/19/7/YZS9X4.png");
   background-size: cover;
   flex-direction: column;
   display: flex;
   align-items: center;
-  margin-top: -80px !important;
   height: 105vh;
-  background-position: center 0%;
-  background-size: 93em;
+  position: relative;
+  z-index: 1;
 }
 
-.backtoHome {
-  padding: 10px;
-  margin-left: 45em;
-  margin-bottom: 10px;
-  font-size: 17px;
-  border: 1px solid rgb(9, 32, 58);
-  border-radius: 12px;
-  background-color: rgb(67, 95, 159);
-  cursor: pointer;
-
-  &.backtoHome:hover {
-    background-color: rgb(158, 170, 187);
-  }
+.quotepage::before {
+  content: "";
+  position: absolute;
+  top: 19.5em;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: url("https://cdn.wallpapersafari.com/19/7/YZS9X4.png");
+  background-size: cover;
+  transform: translateY(-20%);
 }
 
 .details {
   position: relative;
-  top: 12em;
+  top: 3.5em;
   width: 70vw;
 }
 .insidecard {
   display: flex;
   flex-direction: column;
   position: relative;
+  /* Use a light brown color for the background */
+  padding: 20px;
 }
+.btncontainer {
+  display: flex;
+  justify-content: end;
 
+  button {
+    padding: 12px;
+    width: 100px;
+    font-size: 15px;
+    color: rgb(232, 231, 231);
+    border: 4px solid rgba(246, 246, 246, 0.491);
+    position: relative;
+    cursor: pointer;
+    bottom: 6.5em;
+    background-color: rgba(67, 66, 66, 0.811);
+    &:hover {
+      background-color: rgba(133, 131, 131, 0.449) !important;
+      border-color: rgb(122, 122, 119);
+    }
+    &:active {
+      background-color: rgba(179, 176, 176, 0.675) !important;
+    }
+  }
+}
 .quoteName h2,
 .quoteHouse h2,
 .quoteQuotes h2 {
-  font-size: 27px;
+  font-size: 25px;
   display: inline;
   margin-right: 5px;
-  color: rgb(148, 192, 235);
+  color: rgb(185, 217, 222);
 }
 
 .quoteName span,
 .quoteHouse span,
 .quoteQuotes span {
   display: inline;
-  color: rgb(198, 220, 237);
+  font-size: 20px;
+  color: rgb(221, 218, 215);
   font-size: 22px;
+}
+
+.characterImage {
+  width: 150px; /* Adjust the width as needed */
+  height: 150px; /* Adjust the height as needed */
+  object-fit: cover; /* Adjust the object-fit property as needed */
+  margin-left: 20px;
+  margin-bottom: 10px;
+  border: 8px solid #828181; /* Use a brown color for the border */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); /* Add a subtle shadow */
 }
 
 @media only screen and (min-width: 1800px) {
   .quotepage {
-    height: 82em;
-    background-size: 160em;
+    height: 85em;
+    background-position: center 10%;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }
 
@@ -81,9 +116,16 @@
     height: 30em;
   }
   .details {
-    top: 12em;
+    top: 9em;
+    width: 85vw;
   }
   .quotepage {
-    height: 85em;
+    height: 60em;
+  }
+  .btncontainer button {
+    height: 65px !important;
+    width: 106px !important;
+    font-size: 16px !important;
+    bottom: 7em;
   }
 }
