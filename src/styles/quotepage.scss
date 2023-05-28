@@ -9,9 +9,8 @@
   opacity: 0.95;
   overflow: auto; /* Add overflow property */
   li {
-    padding: 4px;
     position: relative;
-    bottom: 30px;
+    bottom: 32px;
   }
 }
 
@@ -48,7 +47,6 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  /* Use a light brown color for the background */
   padding: 20px;
 }
 .btncontainer {
