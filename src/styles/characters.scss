@@ -15,6 +15,7 @@ body {
 .nameslist {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 label {
   margin-right: 5px;
@@ -120,6 +121,9 @@ ul {
 
 @media only screen and (max-width: 768px) {
   .explorepage {
-    height: 105em;
+    height: 180em;
+  }
+  .divList {
+    width: 90vw;
   }
 }

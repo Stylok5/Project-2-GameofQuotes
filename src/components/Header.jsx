@@ -4,9 +4,8 @@ const Header = () => {
   const navigationLinks = [
     { title: "Home", slug: "/" },
     { title: "Characters", slug: "/characters" },
-    { title: "Add your own quotes", slug: "/beers" },
-    { title: "Register", slug: "/register" },
-    { title: "Login", slug: "/login" },
+    { title: "Register", slug: "/" },
+    { title: "Login", slug: "/" },
   ];
 
   return (

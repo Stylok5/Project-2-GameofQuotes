@@ -67,8 +67,6 @@ const QuotePage = () => {
           `https://api.gameofthronesquotes.xyz/v1/character/${id}`
         );
         setQuote(data);
-        console.log(id);
-        console.log(data);
       } catch (e) {
         console.log(e);
       }
