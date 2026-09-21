@@ -3,7 +3,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 
 const QuotePage = () => {
-  const [quote, setQuote] = useState([]);
+  const [quotes, setQuotes] = useState([]);
   const { id } = useParams();
 
   const characterImages = {
@@ -66,58 +66,68 @@ const QuotePage = () => {
         const { data } = await axios.get(
           `https://api.gameofthronesquotes.xyz/v1/character/${id}`
         );
-        setQuote(data);
+        setQuotes(data); 
       } catch (e) {
-        console.log(e);
+        console.log("Error fetching character:", e);
       }
     };
     fetchData();
-  }, []);
+  }, [id]); // Added 'id' to dependency array. If the URL changes, React will refetch!
 
   const navigate = useNavigate();
   const onClick = () => {
     navigate("/characters");
   };
 
+  // If data hasn't loaded yet, show nothing to prevent errors
+  if (!quotes || quotes.length === 0) return null;
+
+  // Since all quotes in the array belong to the same character, we can just grab the first item for the profile info
+  const character = quotes[0];
+
   return (
     <div className="quotepage">
       <div className="details">
-        {quote.map((item, ind) => (
-          <ul key={ind} className="listInfo">
-            <div className="insidecard">
-              <div className="imgContainer">
-                <img
-                  src={characterImages[item.name]}
-                  alt={item.name}
-                  className="characterImage"
-                />
-              </div>
-              <div className="btncontainer">
-                <button onClick={onClick}>Back to characters</button>
-              </div>
-              <li className="quoteName">
-                <h2> Character's name:</h2> <span>{item.name}</span>
-              </li>
-              <li className="quoteHouse">
-                <h2>Character's house:</h2>{" "}
-                <span>
-                  {item.house === null
-                    ? "This character does not have a house or his house is unknown"
-                    : item.house.name}
-                </span>
-              </li>
-              <li className="quoteQuotes">
-                <h2>Character's quotes:</h2> <span>{item.quotes}</span>
-              </li>
+        <div className="btncontainer">
+          <button onClick={onClick}>Back to characters</button>
+        </div>
+        <div className="listInfo">
+          <div className="insidecard">
+            <div className="imgContainer">
+              <img
+                src={characterImages[character.name] || "https://via.placeholder.com/150"}
+                alt={character.name}
+                className="characterImage"
+              />
             </div>
-            {/* <Link to="/">
-              <button className="backtoHome">Back to characters</button>
-            </Link> */}
-          </ul>
-        ))}
+            <div className="quoteName">
+              <h2>Character's name:</h2> 
+              <span>{character.name}</span>
+            </div>
+            <div className="quoteHouse">
+              <h2>Character's house:</h2>
+              <span>
+                {character.house === null
+                  ? "This character does not have a house or his house is unknown"
+                  : character.house.name}
+              </span>
+            </div>
+            <div className="quoteQuotes">
+              <h2>Character's quotes:</h2>
+              <ul>
+                {quotes.map((item, ind) => (
+                  <li key={ind}>
+                    <span>"{item.quotes}"</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
+  
 };
 
 export default QuotePage;

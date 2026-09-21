@@ -1,21 +1,27 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Header = () => {
+  const location = useLocation();
+
   const navigationLinks = [
     { title: "Home", slug: "/" },
     { title: "Characters", slug: "/characters" },
-    { title: "Register", slug: "/" },
-    { title: "Login", slug: "/" },
   ];
+
+  if (location.pathname === "/") {
+    return null;
+  }
 
   return (
     <header className="header">
       <nav>
         <ul className="listHeader">
-          {navigationLinks.map((link, idx) => (
-            <Link key={idx} to={link.slug}>
-              <li className="headerLink">{link.title}</li>
-            </Link>
+          {navigationLinks.map((link) => (
+            <li key={link.slug} className="headerItem">
+              <Link className="headerLink" to={link.slug}>
+                {link.title}
+              </Link>
+            </li>
           ))}
         </ul>
       </nav>

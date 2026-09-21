@@ -1,39 +1,63 @@
 .header {
   width: 100%;
-  background-color: rgb(11, 22, 33);
+  background-color: rgba(11, 22, 33, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   display: flex;
+  justify-content: center;
   align-items: center;
-  opacity: 0.95;
+  padding: 15px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 
-  ul {
+  nav {
+    width: 100%;
+    max-width: 1100px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .listHeader {
     display: flex;
     list-style: none;
-
-    a {
-      text-decoration: none;
-    }
+    margin: 0;
+    padding: 0;
+    gap: 30px;
   }
 
   .headerLink {
-    margin-right: 20px;
-    color: rgb(209, 208, 208);
-    transition: color 0.3s ease;
-  }
+    text-decoration: none;
+    color: #cbd5e1;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
 
-  .headerLink:hover {
-    color: rgb(255, 255, 255);
-  }
+    &:hover {
+      color: #ffffff;
+      background-color: rgba(67, 95, 159, 0.5);
+    }
 
-  .headerLink:active {
-    color: rgb(150, 150, 150);
+    &:active {
+      transform: scale(0.95);
+    }
   }
 }
 
 @media only screen and (max-width: 768px) {
-  .header ul li {
-    font-size: 15px;
-  }
   .header {
-    justify-content: center;
+    padding: 12px 10px;
+
+    .listHeader {
+      gap: 10px;
+    }
+
+    .headerLink {
+      font-size: 15px;
+      padding: 6px 12px;
+    }
   }
 }

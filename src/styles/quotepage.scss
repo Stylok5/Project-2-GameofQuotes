@@ -1,123 +1,114 @@
-.listInfo {
-  display: flex;
-  padding: 50px 10px 240px 10px;
-  height: 10em;
-  position: relative;
-  bottom: 25px;
-  flex-direction: column;
-  background-color: rgba(60, 59, 58, 0.811);
-  opacity: 0.95;
-  overflow: auto; /* Add overflow property */
-  li {
-    position: relative;
-    bottom: 45px;
-  }
+* {
+  box-sizing: border-box;
 }
 
 .quotepage {
-  background-image: url("https://cdn.wallpapersafari.com/19/7/YZS9X4.png");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("https://cdn.wallpapersafari.com/19/7/YZS9X4.png");
   background-size: cover;
-  flex-direction: column;
+  background-position: center top;
+  background-attachment: fixed;
+  min-height: 100vh;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  height: 105vh;
-  background-position: 0em 25vh;
+  padding: 40px 20px;
 }
 
 .details {
-  position: relative;
-  top: 6vh;
-  width: 70vw;
-}
-.insidecard {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  bottom: 30px;
-  padding: 20px;
+  width: 100%;
+  max-width: 800px;
 }
 
 .btncontainer {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
+  margin-bottom: 15px;
 
   button {
-    padding: 12px;
-    width: 108px;
-    font-size: 17px;
-    color: rgb(232, 231, 231);
-    border: 4px solid rgba(246, 246, 246, 0.491);
-    position: relative;
+    padding: 10px 24px;
+    font-size: 16px;
+    color: #e2e8f0;
+    background-color: rgba(37, 37, 38, 0.9);
+    border: 1px solid rgba(67, 95, 159, 0.6);
+    border-radius: 8px;
     cursor: pointer;
-    bottom: 6.5em;
-    background-color: rgba(67, 66, 66, 0.811);
+    transition: all 0.3s ease;
+
     &:hover {
-      background-color: rgba(133, 131, 131, 0.449) !important;
-      border-color: rgb(122, 122, 119);
+      background-color: rgba(67, 95, 159, 0.9);
+      transform: translateY(-2px);
     }
+    
     &:active {
-      transform: scale(1.1);
+      transform: scale(0.95);
     }
   }
 }
-.quoteName h2,
-.quoteHouse h2,
-.quoteQuotes h2 {
-  font-size: 25px;
-  display: inline;
-  margin-right: 5px;
-  color: rgb(185, 217, 222);
+
+.listInfo {
+  background-color: rgba(20, 20, 20, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
 }
 
-.quoteName span,
-.quoteHouse span,
-.quoteQuotes span {
-  display: inline;
-  font-size: 20px;
-  color: rgb(221, 218, 215);
-  font-size: 22px;
+.insidecard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
 }
 
 .characterImage {
-  width: 150px; /* Adjust the width as needed */
-  height: 150px; /* Adjust the height as needed */
-  object-fit: cover; /* Adjust the object-fit property as needed */
-  margin-left: 17px;
-  margin-bottom: 10px;
-  border: 8px solid #828181; /* Use a brown color for the border */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); /* Add a subtle shadow */
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid rgba(67, 95, 159, 0.6);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 }
 
-@media only screen and (min-width: 1800px) {
-  .quotepage {
-    height: 85em;
-    background-position: center 10%;
-    background-repeat: no-repeat;
-    background-size: cover;
+.quoteName,
+.quoteHouse,
+.quoteQuotes {
+  text-align: center;
+  width: 100%;
+
+  h2 {
+    display: block;
+    font-size: 13px;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0 0 8px 0;
+  }
+
+  span {
+    display: block;
+    font-size: 22px;
+    color: #f8fafc;
+    line-height: 1.6;
+    font-weight: 300;
   }
 }
 
 @media only screen and (max-width: 768px) {
   .listInfo {
-    height: 30em;
+    padding: 30px 15px;
   }
-  .details {
-    top: 9em;
-    width: 93vw;
-  }
-  .quotepage {
-    height: 150vh;
-    background-position: 30em 35em;
-  }
-  .btncontainer button {
-    height: 65px !important;
-    width: 85px !important;
-    text-align: center;
-    font-size: 12px !important;
-    bottom: 10em;
-  }
+
   .characterImage {
-    width: 35vw;
-    margin-left: 8px;
+    width: 140px;
+    height: 140px;
+  }
+
+  .quoteName span,
+  .quoteHouse span,
+  .quoteQuotes span {
+    font-size: 18px;
   }
 }

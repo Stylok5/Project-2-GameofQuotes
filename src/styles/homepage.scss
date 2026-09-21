@@ -1,53 +1,56 @@
-.homeTitle {
-  text-align: center;
-  position: relative;
-  width: 35em;
-  height: 4em;
-  font-size: 25px;
-  border-radius: 50px;
-  border: 3px solid rgb(9, 32, 58);
-  padding: 12px;
-  background-color: rgba(0, 0, 0, 0.06);
-  opacity: 0.9;
+* {
+  box-sizing: border-box;
 }
 
 .homepage {
-  height: 95vh;
-  background-size: cover;
-  background-position: 20% center;
   background-image: url("https://cdn.wallpapersafari.com/83/59/cTdHv0.jpg");
-  button {
-    height: 4em;
-    width: 7em;
-    position: absolute;
-    top: 46%;
-    right: 75%;
-    transform: translate(50%, -50%);
-    font-size: 20px;
-    border: 2px solid rgba(255, 255, 255, 0.8);
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 12vw; 
+}
+
+.cta-button {
+  padding: 16px 48px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #111827; 
+  background-color: transparent;
+  border: 3px solid #111827;
+  border-radius: 40px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
+
+  &:hover {
+    background-color: #111827;
+    color: #ffffff;
+    transform: translateY(-4px); 
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4); 
   }
 
-  button:hover {
-    background-color: rgba(199, 197, 197, 0.8);
-    color: black;
-  }
-
-  button:active {
-    background-color: rgba(255, 255, 255, 0.6);
-    color: rgba(78, 77, 77, 0.8);
+  &:active {
+    transform: translateY(0); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   }
 }
 
 @media only screen and (max-width: 768px) {
-  button {
-    height: 3em !important;
-    width: 6em !important;
-    font-size: 19px !important;
-  }
   .homepage {
-    background-position: 79% center;
+    background-position: 75% center; 
+    justify-content: center;
+    align-items: flex-end;
+    padding-left: 0;
+    padding-bottom: 15vh;
+  }
+  
+  .cta-button {
+    font-size: 18px;
+    padding: 12px 30px;
+    background-color: rgba(255, 255, 255, 0.8);
   }
 }
